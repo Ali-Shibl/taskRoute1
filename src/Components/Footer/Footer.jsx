@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Data from '../../../posts.json'
 
 export default function Footer() {
   return (
@@ -56,20 +57,12 @@ export default function Footer() {
                 <span className='sepical'></span>
                 <span className=' fs-6 fw-bold text-white '>التصنيفات</span>
               </div>
-                             <ul className='list-unstyled mt-4'>
-                <li className='nav-item'>
-                  <NavLink to={''} className={'nav-link'}>اضاءة</NavLink>
+                <ul className='list-unstyled mt-4'>
+ {Data.categories.map((category , index) => <li className='nav-item mb-3' key={index}>
+                  <NavLink  to={`/blog?category=${category.name}`} className={'nav-link'}>{category.name}</NavLink>
                 </li>
-                <li className='nav-item my-3'>
-                  <NavLink to={'blog'} className={'nav-link'}>بورترية</NavLink>
-                </li>
-                <li className='nav-item mb-3'>
-                  <NavLink to={'about'} className={'nav-link'}> مناظر طبيعية</NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to={'about'} className={'nav-link'}>  تقنيات</NavLink>
-                </li>
-
+)}
+                                    
                </ul>
               
 

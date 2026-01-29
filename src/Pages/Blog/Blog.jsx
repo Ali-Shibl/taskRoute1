@@ -41,10 +41,13 @@ const [selectedCategory, setSelectedCategory] = useState('الجميع');
   useEffect( () => {
     setCategories(Data.categories);
     setPosts(Data.posts);
-    if(nameCategory){
-      filterBtn(nameCategory);
-    }
+  
   }, []);
+
+  useEffect( () => {
+      filterBtn(nameCategory);
+   
+  }, [nameCategory]);
 
 
 
