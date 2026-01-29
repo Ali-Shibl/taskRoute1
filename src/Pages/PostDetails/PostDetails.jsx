@@ -46,9 +46,9 @@ const post = Data.posts.find(post => post.id ==  id);
   <div
     className={`position-absolute top-50 start-50 translate-middle p-4 ${styles.content}`}
   >
-    <div className='d-flex align-items-center gap-2'>
-         <span className="btn-main">{post.category}</span>
-    <div className=" text-white-50 d-flex align-items-center gap-2 my-2">
+    <div className='d-flex align-items-center flex-wrap  gap-2'>
+         <span className="btn-main ">{post.category}</span>
+    <div className=" text-white-50 d-flex flex-wrap align-items-center gap-2 ">
                      <p className='m-0'>    <i className="fa-regular fa-clock me-1"></i> {post.readTime}</p>
                 <p className='m-0'>    <i className="fa-regular fa-calendar me-1"></i> {Time(post.date)}</p>
     </div>
@@ -180,7 +180,7 @@ const post = Data.posts.find(post => post.id ==  id);
           </div>
           <div className='my-4 p-3 crad-gray rounded-4'>
 
-            <div className="row align-items-center">
+            <div className="row g-3 align-items-center">
               <div className="col-md-6">
                 <div className='card bg-black text-white text-center p-3 rounded-4 '>
                   <i className="fa fa-solid fa-camera mx-auto  text-main"></i>
