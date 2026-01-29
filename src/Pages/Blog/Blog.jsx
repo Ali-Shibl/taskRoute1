@@ -45,8 +45,9 @@ const [selectedCategory, setSelectedCategory] = useState('الجميع');
   }, []);
 
   useEffect( () => {
-      filterBtn(nameCategory);
-   
+    if (nameCategory) {
+              filterBtn(nameCategory);
+    }
   }, [nameCategory]);
 
 
